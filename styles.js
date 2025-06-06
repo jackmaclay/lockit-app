@@ -2,9 +2,9 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 // 🎨 Color Palette
-const PRIMARY_COLOR_1 = '#FF5E3B';   // Bright Orange 🟠
-const SECONDARY_COLOR_1 = '#FDEBDC'; // Light Peach ⚪️
-const SECONDARY_COLOR_2 = '#3D3D3D'; // Dark Grey ⚫️
+const PRI_COL_1 = '#FF5E3B';   // Bright Orange 🟠
+const SEC_COL_1 = '#FDEBDC'; // Light Peach ⚪️
+const SEC_COL_2 = '#3D3D3D'; // Dark Grey ⚫️
 
 // 📦 Shared Styles
 const sharedStyles = StyleSheet.create({
@@ -13,12 +13,12 @@ const sharedStyles = StyleSheet.create({
 // 🧱 Layout Containers
 containerFull: {
   flex: 1,
-  backgroundColor: SECONDARY_COLOR_1,
+  backgroundColor: SEC_COL_1,
 },
 
 containerPadded: {
   flex: 1,
-  backgroundColor: SECONDARY_COLOR_1,
+  backgroundColor: SEC_COL_1,
   alignItems: 'center',
   justifyContent: 'flex-start',
   paddingTop: 200,
@@ -28,7 +28,7 @@ containerPadded: {
 
 containerCentered: {
   flex: 1,
-  backgroundColor: SECONDARY_COLOR_1,
+  backgroundColor: SEC_COL_1,
   alignItems: 'center',
   justifyContent: 'center',
 },
@@ -36,19 +36,19 @@ containerCentered: {
 
   // 📝 Text Styles
   title: {
-    color: PRIMARY_COLOR_1,
+    color: PRI_COL_1,
     fontSize: 80,
     fontWeight: 'bold',
     marginBottom: -20,
   },
   subtitle: {
-    color: SECONDARY_COLOR_2,
+    color: SEC_COL_2,
     fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 10,
   },
   body: {
-    color: SECONDARY_COLOR_2,
+    color: SEC_COL_2,
     fontSize: 20,
     textAlign: 'center',
     marginHorizontal: 20,
@@ -56,7 +56,7 @@ containerCentered: {
 
   // 🔘 Button Styles
   button: {
-    backgroundColor: PRIMARY_COLOR_1,
+    backgroundColor: PRI_COL_1,
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 30,
@@ -69,13 +69,13 @@ containerCentered: {
 
   // Secondary button: dark grey background, light peach text
   buttonSecondary: {
-    backgroundColor: SECONDARY_COLOR_2,
+    backgroundColor: SEC_COL_2,
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 30,
   },
   buttonSecondaryText: {
-    color: SECONDARY_COLOR_1,
+    color: SEC_COL_1,
     fontSize: 22,
     fontWeight: 'bold',
   },
@@ -85,7 +85,7 @@ containerCentered: {
     position: 'absolute',
     top: 50,
     left: 20,
-    backgroundColor: PRIMARY_COLOR_1,
+    backgroundColor: PRI_COL_1,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -104,5 +104,10 @@ containerCentered: {
     height: Dimensions.get('window').height,
   },
 });
+sharedStyles.colours = {
+  primary: PRI_COL_1,
+  secondary: SEC_COL_1,
+  dark: SEC_COL_2,
+};
 
 export default sharedStyles;

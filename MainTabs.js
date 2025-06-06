@@ -1,7 +1,8 @@
 // MainTabs.js
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
+import styles from './styles'; 
 
 // Import screens
 import MapScreen from './MapScreen';
@@ -14,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
 export default function MainTabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
         screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
                 let iconName;
@@ -26,13 +27,13 @@ export default function MainTabs() {
                 } else if (route.name === 'Plans') {
                     iconName = 'event';
                 } else if (route.name === 'Profile') {
-                    iconName = 'account_circle';
+                    iconName = 'account-circle';
                 }
 
-                return <Icon name={iconName} size={size} color={color} />;
+                return <MaterialIcons name={iconName} size={size} color={color} />;
             },
-            tabBarActiveTintColor: '#FF5E3B', // Your primary color
-            tabBarInactiveTintColor: '#3D3D3D', // Your secondary color
+            tabBarActiveTintColor: 'PRI_COL_1', // Your primary color
+            tabBarInactiveTintColor: 'SEC_COL_2', // Your secondary color
             headerShown: false,
       })}
     >
