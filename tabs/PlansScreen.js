@@ -4,8 +4,8 @@ import styles from '../styles'; // Assuming you have a styles.js file for consis
 
 export default function PlansScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Plans Screen</Text>
+    <View style={styles.containerCentered}>
+      <Text style={styles.subtitle}>Plans Screen</Text>
     </View>
   );
 }
